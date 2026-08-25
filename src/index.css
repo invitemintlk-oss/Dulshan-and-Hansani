@@ -27,6 +27,7 @@
   background-color: var(--color-paper);
   color: #2D2D2D;
   font-family: var(--font-montserrat);
+  font-weight: 700;
 }
 
 html, body {
