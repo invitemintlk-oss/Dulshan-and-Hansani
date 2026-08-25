@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Cormorant Garamond", serif;
-  --font-script: "Great Vibes", cursive;
-  --font-sans: "Inter", sans-serif;
-  --font-cinzel: "Cinzel", "Abhaya Libre", serif;
-  --font-montserrat: "Montserrat", "Abhaya Libre", sans-serif;
-  --font-playball: "Playball", "Abhaya Libre", cursive;
+  --font-serif: "Abhaya Libre", "Cormorant Garamond", serif;
+  --font-script: "Abhaya Libre", "Great Vibes", cursive;
+  --font-sans: "Abhaya Libre", "Inter", sans-serif;
+  --font-cinzel: "Abhaya Libre", "Cinzel", serif;
+  --font-montserrat: "Abhaya Libre", "Montserrat", sans-serif;
+  --font-playball: "Abhaya Libre", "Playball", cursive;
 
   --color-sage: #f3a7cd;
   --color-paper: #FDFBF7;
