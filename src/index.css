@@ -1,33 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Abhaya Libre", "Cormorant Garamond", serif;
-  --font-script: "Abhaya Libre", "Great Vibes", cursive;
-  --font-sans: "Abhaya Libre", "Inter", sans-serif;
-  --font-cinzel: "Abhaya Libre", "Cinzel", serif;
-  --font-montserrat: "Abhaya Libre", "Montserrat", sans-serif;
-  --font-playball: "Abhaya Libre", "Playball", cursive;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-cinzel: "Cinzel", "Cormorant Garamond", serif;
+  --font-montserrat: "Montserrat", system-ui, sans-serif;
+  --font-playball: "Great Vibes", cursive;
 
-  --color-sage: #f3a7cd;
-  --color-paper: #FDFBF7;
+  --color-sage: #f5c518;
+  --color-paper: #fffdf3;
 
-  --color-theme-50: #fdf7fb;
-  --color-theme-100: #f8eaf3;
-  --color-theme-200: #f1d6e8;
-  --color-theme-300: #e8bdd9;
-  --color-theme-400: #dd9ec8;
-  --color-theme-500: #f3a7cd;
-  --color-theme-600: #bc5f99;
-  --color-theme-700: #9f4c80;
-  --color-theme-800: #833f69;
-  --color-theme-900: #6c3557;
+  /* Bright traditional yellow (50–500), deep warm brown for readable text (700–900) */
+  --color-theme-50: #fffdf0;
+  --color-theme-100: #fff8d4;
+  --color-theme-200: #ffefa3;
+  --color-theme-300: #ffe266;
+  --color-theme-400: #fdd535;
+  --color-theme-500: #f5c518;
+  --color-theme-600: #d9a90a;
+  --color-theme-700: #8a6a05;
+  --color-theme-800: #5e4806;
+  --color-theme-900: #3d2f06;
+
+  /* Accent: lighter sunny yellow for rules, borders and ornaments */
+  --color-accent-200: #fff3b0;
+  --color-accent-300: #ffe680;
+  --color-accent-400: #fbd437;
+  --color-accent-500: #f0bd12;
+  --color-accent-600: #c99a04;
 }
 
 :root {
   background-color: var(--color-paper);
   color: #2D2D2D;
   font-family: var(--font-montserrat);
-  font-weight: 700;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
 }
 
 html, body {
@@ -78,7 +87,6 @@ html, body {
   width: clamp(300px, 38vw, 620px);
   aspect-ratio: 1 / 1;
   opacity: var(--mandala-accent-opacity);
-  filter: sepia(1) saturate(1.55) hue-rotate(285deg) brightness(1.12) contrast(1.05);
 }
 
 .mandala-corner.is-soft {
@@ -118,9 +126,9 @@ html, body {
 
 .website-shell {
   background:
-    radial-gradient(circle at 18% 14%, rgba(243, 167, 205, 0.19), transparent 38%),
-    radial-gradient(circle at 84% 72%, rgba(221, 158, 200, 0.16), transparent 42%),
-    linear-gradient(180deg, #fffdf8 0%, #fdfaf5 42%, #fffdf8 100%);
+    radial-gradient(circle at 18% 14%, rgba(245, 197, 24, 0.19), transparent 38%),
+    radial-gradient(circle at 84% 72%, rgba(255, 226, 102, 0.16), transparent 42%),
+    linear-gradient(180deg, #fffdf3 0%, #fffbea 42%, #fffdf3 100%);
 }
 
 .section-floral-overlay {
@@ -132,24 +140,38 @@ html, body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 25%, rgba(243, 167, 205, 0.16), transparent 35%),
-    radial-gradient(circle at 78% 75%, rgba(232, 189, 217, 0.14), transparent 38%);
+    radial-gradient(circle at 20% 25%, rgba(245, 197, 24, 0.16), transparent 35%),
+    radial-gradient(circle at 78% 75%, rgba(255, 226, 102, 0.14), transparent 38%);
 }
 
 .paper-grain {
   background-image:
     radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.85) 0.5px, transparent 0.8px),
-    radial-gradient(circle at 78% 42%, rgba(210, 180, 198, 0.2) 0.6px, transparent 0.9px),
-    radial-gradient(circle at 42% 76%, rgba(164, 124, 146, 0.1) 0.5px, transparent 0.8px);
+    radial-gradient(circle at 78% 42%, rgba(220, 190, 120, 0.2) 0.6px, transparent 0.9px),
+    radial-gradient(circle at 42% 76%, rgba(160, 130, 60, 0.1) 0.5px, transparent 0.8px);
   background-size: 9px 9px, 15px 15px, 18px 18px;
 }
 
 .paper-grain-strong {
   background-image:
     radial-gradient(circle at 22% 24%, rgba(255, 255, 255, 0.88) 0.55px, transparent 0.85px),
-    radial-gradient(circle at 70% 64%, rgba(190, 145, 170, 0.22) 0.65px, transparent 0.95px),
+    radial-gradient(circle at 70% 64%, rgba(200, 165, 80, 0.22) 0.65px, transparent 0.95px),
     linear-gradient(180deg, rgba(255, 251, 247, 0.75), rgba(253, 245, 238, 0.8));
   background-size: 8px 8px, 14px 14px, 100% 100%;
+}
+
+.admin-shell {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 226, 102, 0.25), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(255, 239, 163, 0.18), transparent 45%),
+    #fffdf3;
+}
+
+.dotted-line {
+  background-image: radial-gradient(circle, #8a6a05 1px, transparent 1.4px);
+  background-size: 7px 3px;
+  background-repeat: repeat-x;
+  background-position: bottom;
 }
 
 .cv-auto {
