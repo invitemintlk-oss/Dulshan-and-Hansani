@@ -21,7 +21,7 @@ const introVideo = "/opt/intro.mp4";
 const introPoster = "/opt/intro-poster.webp";
 const peacockLeft = "/opt/peacock-left.webp";
 const peacockRight = "/opt/peacock-right.webp";
-/** Replace this file with the couple's own illustration (transparent PNG works best). */
+/** Couple illustration (from public/x.jpeg, white background removed). */
 const coupleImage = "/opt/couple.webp";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
@@ -937,13 +937,13 @@ export default function WeddingInvitation({ guestName = "" }: { guestName?: stri
                       </form>
                     </div>
 
-                    <div className="mt-20 md:mt-28 flex flex-col items-center relative w-full">
+                    <div className="mt-20 md:mt-28 flex flex-col items-center relative w-full px-2">
                       <p className="text-[11px] md:text-[13px] uppercase tracking-[0.6em] text-theme-700 font-semibold relative z-10 bg-paper px-6 py-2 rounded-full border border-theme-100">
                         With love
                       </p>
-                      <h3 className="font-cinzel text-4xl sm:text-5xl md:text-6xl text-theme-900 relative z-10 pt-6 tracking-[0.1em]">
+                      <h3 className="font-cinzel text-[clamp(1.5rem,7vw,3.75rem)] text-theme-900 relative z-10 pt-6 tracking-[0.05em] md:tracking-[0.1em] leading-tight text-center max-w-full flex flex-wrap items-baseline justify-center">
                         {WEDDING.groom.name}
-                        <span className="font-script text-theme-600 tracking-normal mx-3">&amp;</span>
+                        <span className="font-script text-theme-600 tracking-normal mx-2 md:mx-3">&amp;</span>
                         {WEDDING.bride.name}
                       </h3>
                     </div>
@@ -951,8 +951,8 @@ export default function WeddingInvitation({ guestName = "" }: { guestName?: stri
                 </div>
               </section>
 
-              <footer className="py-8 bg-paper border-t border-theme-200/40 text-center relative z-10">
-                <p className="text-[11px] md:text-xs uppercase tracking-[0.4em] text-stone-400 font-semibold">
+              <footer className="py-8 pl-4 pr-20 md:px-4 bg-paper border-t border-theme-200/40 text-center relative z-10">
+                <p className="text-[11px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] text-stone-400 font-semibold">
                   {COUPLE_NAMES} · {WEDDING.dateShort}
                 </p>
               </footer>
